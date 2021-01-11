@@ -13,17 +13,13 @@ function App() {
 
   const [correct, setCorrect] = useState(0);
 
-  const success = [];
-
-  const notMastered = Data;
-
   const [input, setInput] = useState('');
 
   const [showName, setShowName] = useState(false);
 
   const nextItem = () => {
     setShowName(false);
-    setItem(notMastered[Math.floor(Math.random() * notMastered.length)]);
+    setItem(Data[Math.floor(Math.random() * Data.length)]);
   };
 
   function handleChange(e) {
